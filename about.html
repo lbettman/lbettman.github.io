@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>London Bettman Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: white;
+      color: #1c3d5a;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin: 1em 0 0.2em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 2em;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 1.25em;
+      margin-top: 2em;
+    }
+
+    p {
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 1.5em;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1em 2em;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    hr {
+      border: 0;
+      height: 2px;
+      background-color: #1c3d5a;
+      width: 80px;
+      margin: 2em auto;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 10px;
+      padding: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid #1c3d5a;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid white;
+      background: white;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 0.25em 0.5em;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    .close-btn:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.75em 1.5em;
+      background-color: #1c3d5a;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+
+    .resume-button:hover {
+      transform: scale(1.05);
+      background-color: #234a6f;
+    }
+
+    .resume-button:active {
+      transform: scale(0.95);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>London Bettman</h1>
+  <h2>Studio Art and Computer Science Major at Carleton College</h2>
+
+  <div class="section">
+    <hr>
+    <h3>Artist Statement</h3>
+    <p>My artistic practice revolves around metalsmithing and jewelry fabrication. I work primarily in silver, copper, bronze, and gemstones, using both traditional fabrication techniques and modern technologies like computer-aided design and 3D printing. This results in nonorganic, geometric forms intended to be worn on the body.</p>
+
+    <p>My background in computer science deeply influences my work. I often approach design through a lens shaped by digital processes and a fascination with how technology can enhance or reshape craft.</p>
+
+    <p>I started metalsmithing at Carleton, so my work has been greatly shaped by the studio environment, my professors, and fellow students. I view my current body of work as a library of experiences, each piece a record of what I’ve learned, and each iteration built upon previous experiments.</p>
+
+    <p>I try to seek discomfort in the studio. If a project is easy, I usually don’t have an interest in doing it. I’m driven by the challenge of learning new skills and forcing myself to grow in unfamiliar territory.</p>
+
+    <p>Ultimately, I see metalsmithing as a site of both discipline and discovery. My goal is not to perfect a process, but to keep evolving, to remain curious, to stay uncomfortable, and to build work that challenges both me and the people who encounter it.</p>
+  </div>
+
+  <div class="section">
+    <hr>
+    <h3>Contact</h3>
+    <div class="contact">
+      <p>bettmanl@carleton.edu</p>
+      <p>london.bettman@gmail.com</p>
+      <a href="resume.pdf" target="_blank" class="resume-button">View Resume</a>
+    </div>    
+    
+  </div>
+
+  <!-- Image Grid -->
+  <div class="image-grid">
+    <img src="jewelry_1.jpg" alt="Jewelry 1">
+    <img src="jewelry_2.jpg" alt="Jewelry 2">
+    <img src="jewelry_3.jpg" alt="Jewelry 3">
+    <img src="jewelry_4.jpg" alt="Jewelry 4">
+    <img src="jewelry_5.jpg" alt="Jewelry 5">
+    <img src="jewelry_6.jpg" alt="Jewelry 6">
+    <img src="jewelry_7.jpg" alt="Jewelry 7">
+    <img src="jewelry_8.jpg" alt="Jewelry 8">
+    <img src="jewelry_9.jpg" alt="Jewelry 9">
+    <img src="photo_1.jpg" alt="Photo 1">
+    <img src="photo_2.jpg" alt="Photo 2">
+    <img src="photo_3.jpg" alt="Photo 3">
+    <img src="photo_4.jpg" alt="Photo 4">
+    <img src="photo_5.jpg" alt="Photo 5">
+    <img src="photo_6.jpg" alt="Photo 6">
+    <img src="photo_7.jpg" alt="Photo 7">
+    <img src="photo_8.jpg" alt="Photo 8">
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" onclick="closeLightbox()">×</button>
+    <img src="" alt="Expanded image" id="lightbox-img">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".image-grid img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.classList.add("active");
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightboxImg.src = "";
+      lightboxImg.alt = "";
+    }
+
+    // Optional: Close lightbox on background click
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  </script>
+
+</body>
+</html>
