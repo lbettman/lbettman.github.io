@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>London Bettman Portfolio</title>
+  <title>Art – London Bettman</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>London Bettman</h1>
-  <h2>Studio Art and Computer Science Major at Carleton College</h2>
-  <h3>Class of 2026</h3>
-  <p> This page is under construction.</p>
+  <h1>Art & Metalsmithing</h1>
+  <p>This project page is under construction.</p>
 
   <div class="section" style="text-align: center;">
     <a href="index.html" class="resume-button">Homepage</a>
@@ -18,7 +16,7 @@
     <a href="art.html" class="resume-button" style="margin-left: 1em;">Art & Metalsmithing</a>
   </div>
 
-  <!-- <div class="section">
+<div class="section">
     <hr>
     <h3>Artist Statement</h3>
     <p>My artistic practice revolves around metalsmithing and jewelry fabrication. I work primarily in silver, copper, bronze, and gemstones, using both traditional fabrication techniques and modern technologies like computer-aided design and 3D printing. This results in nonorganic, geometric forms intended to be worn on the body.</p>
@@ -30,19 +28,62 @@
     <p>I try to seek discomfort in the studio. If a project is easy, I usually don’t have an interest in doing it. I’m driven by the challenge of learning new skills and forcing myself to grow in unfamiliar territory.</p>
 
     <p>Ultimately, I see metalsmithing as a site of both discipline and discovery. My goal is not to perfect a process, but to keep evolving, to remain curious, to stay uncomfortable, and to build work that challenges both me and the people who encounter it.</p>
-  </div> -->
+ </div>
 
-  <h2>In progress Bio section</h2>
-  <p>London Bettman, CS and Studio Art, class of 2026, Carleton College.
-    <br>
-    <strong>Check Resume for more detailed bio information, found at bottom of page.</strong>
-  </p>
-   <div class="image-grid">
-    <img src="headshot.png" alt="Very Profesional Headshot">
+
+   <!-- Image Grid -->
+  <div class="image-grid">
+    <img src="jewelry_1.jpg" alt="Jewelry 1">
+    <img src="jewelry_2.jpg" alt="Jewelry 2">
+    <img src="jewelry_3.jpg" alt="Jewelry 3">
+    <img src="jewelry_4.jpg" alt="Jewelry 4">
+    <img src="jewelry_5.jpg" alt="Jewelry 5">
+    <img src="jewelry_6.jpg" alt="Jewelry 6">
+    <img src="jewelry_7.jpg" alt="Jewelry 7">
+    <img src="jewelry_8.jpg" alt="Jewelry 8">
+    <img src="jewelry_9.jpg" alt="Jewelry 9">
+    <img src="photo_1.jpg" alt="Photo 1">
+    <img src="photo_2.jpg" alt="Photo 2">
+    <img src="photo_3.jpg" alt="Photo 3">
+    <img src="photo_4.jpg" alt="Photo 4">
+    <img src="photo_5.jpg" alt="Photo 5">
+    <img src="photo_6.jpg" alt="Photo 6">
+    <img src="photo_7.jpg" alt="Photo 7">
+    <img src="photo_8.jpg" alt="Photo 8">
   </div>
 
+  <!-- Lightbox Overlay -->
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" onclick="closeLightbox()">×</button>
+    <img src="" alt="Expanded image" id="lightbox-img">
+  </div>
 
-  <div class="section">
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".image-grid img");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.classList.add("active");
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightboxImg.src = "";
+      lightboxImg.alt = "";
+    }
+
+    // Optional: Close lightbox on background click
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  </script>
+  
+    <div class="section">
     <hr>
     <h3>Contact</h3>
     <div class="contact">
@@ -52,7 +93,6 @@
     </div>    
     
   </div>
-  
 
 </body>
 </html>
