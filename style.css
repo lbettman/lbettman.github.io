@@ -144,3 +144,10 @@ hr {
 .resume-button:active {
     transform: scale(0.95);
 }
+
+.basic-image {
+  display: block;
+  max-width: 75%;
+  height: auto;
+  margin: 1.5em auto;
+}
