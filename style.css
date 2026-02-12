@@ -151,3 +151,30 @@ hr {
   height: auto;
   margin: 1.5em auto;
 }
+
+
+.jump-nav {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.jump-button {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.75em 1em;
+  background-color: #538abb;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+.jump-button:hover {
+  background-color: #6bace9;
+  transform: scale(1.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
