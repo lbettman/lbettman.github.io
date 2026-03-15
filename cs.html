@@ -31,6 +31,10 @@
     <a href="#social-media-ethics" class="jump-button">
       Social Media x Ethics
     </a>
+
+    <a href="#everyday-tech" class="jump-button">
+      Everyday Tech Project
+    </a>
   </div>
 
 <section id="digital-logic">
@@ -102,10 +106,51 @@
   <br>
   <p>This is a larger under construction section. This section will go over our in class discussions, and how the questions poses/ the discussion has shaped my thinking. I will also include here refrences to the class readings, and references to specific topic questions brought up in class.</p>
 
+</section>
 
 
-
-
+<section id="everyday-tech">
+  <div>
+    <h2>Everyday Tech Project</h2>
+  </div>
+  <p>For our project we annalyze the everyday technology of mesh networks through the lens of epistemology. Specifically, we look at Ring Cameras as an example of a modern, and very relevant, mesh network.</p>
+  <br>
+  <p>Before talking about ring cameras in a mesh network, we need to look at the internal technologiers of ring cameras. Ring cameras are equiped with high resolution color cameras that record an imense amount of data. Using this data, you can do things like facial recognition. In short, facial recognition uses concolitional neural networks (CNN) to extract features from an image and compare those features to a known database. In our specific example, the CNN would use kernals (matricies of values being multiplied onto each pixel of an image) to find facial features like the corner of your mouth, and your interpupilary distance (IPD). All these data points are then compared to a database of know faces.</p>
+  <br>
+  <p>To send this data, ring cameras are part of a mesh network. A mesh network is similar to you home network, where you have one router connected to multiple devices. Except in a mesh networ, all devices are routers and are therefore connected to eachother. Mesh networks are self healing, decentralized, scalable, and efficient. For example, if I have a ring camera, and my home network goes down, the ring camera stays connected because it can connect to my neibors ring camera, or other devices in the mesh network. So there are always multiple paths for data to take when one node fails.</p>
+  <br>
+  <p>These features of a mesh network are demonstrated in out Demo. The demo was created using the 
+    <a href="https://github.com/mwarning/MeshGraphViewer" target="_blank" rel="noopener">
+      MeshGraphViewer
+    </a> 
+    git hub, which was modified to include many custom functions that are interactiable in a web based viewer. (including add node, remove node, BFS, highlighing edges...). Our demo
+    <a href="https://github.com/lbettman/MeshGraphViewer" target="_blank" rel="noopener">
+      is linked here
+    </a>. The demo was writen in a combination of html for the web visuals, json for graphs, python for most of the graph functions and controls, and shell scripts for the stuff python couldnt do (like changing the graph live, instead of having to shut down and restart the demo with different config files). The demo enviroment is set up inside a ubuntu dev container.</p>
+    <br>
+    <img src="large_mesh.png" alt="Example of a mesh network, 25 nodes" class="small-image">
+    <p>This image shows an example of a mesh network with 25 nodes running in the web demo. Each of these nodes represents a device on a mesh network. As you can see, each device is not just connected to a central router, but they are all connected to eachother.</p>
+    <br>
+    <img src="large_mesh_bfs.png" alt="bfs ran on mesh network from node 16 to 5" class="small-image">
+    <p>This image shows what happens when we run our custom BFS function on the mesh network from node 16 to node 5. Note that the path in yellow goes through node 18. In our version, each edge has the same weight, but in a real life mesh network each edge might be weighted by distance, signal integrity, and other factors.</p>
+    <br>
+    <img src="large_mesh_bfs2.png" alt="bfs ran on mesh network from node 16 to 5 version 2" class="small-image">
+    <p>If we remove node 18 from the network and run BFS from node 16 to node 5 again, we see that it the connection is still made, despite the removal of a node along its previous path. This shows the redundancy and self healing capabilities of mesh networks.</p>
+    <br>
+    <br>
+    <p>In class we discussed this technology through the lens of epistemology. Specifically, social epistemology, which is the philosophical study of knowledge as a social phenomenon. Instead of asking "how does an individual know things," it asks how communities, institutions, and networks come to know things together. Within this, we think about the idea of Testimony. We wonder about what the individuals role is in a network. Individual being both the pirce of technology, and the human knowledge. We want to explore what knowledge and truth mean from an individual standpoint, and then what it means from a comunal point of view. Given this, we pose questions to the class.</p>
+    <p>Should collective knowledge-gathering (like wide scale data collection from Ring cameras) carry more weight than individual testimony? Are there situations in which whe might privilege one type of knowledge over another?</p>
+    <p> The “knowledge” produced by a Ring mesh network is collectively generated. We might think of it as a shared epistemic resource (containing conglomerated knowledge of the movement people, places, devices). With this in mind, do communities have any claim to govern/access/delete it? What are the benefits of having access to vast amounts of data like this? What are the downsides?</p>
+    <br>
+    <p>We also inquire about the nessesity of Privacy sparked by ideas in Michel Foucaults book Disipline and Punish, the Birth of the Prison. (Foucault, 1975) We tangle with ideas like, Surveillance produces obedient subjects, Bentham's Panopticon works even when no one is watching (the possibility of perception is enough), Privacy is where resistance and autonomous selfhood become possible, and The erosion of private space is how institutions normalize behavior and crush. To the class, we post questions.</p>
+    <p>Does the possibility of being watched change what you do, or who you are?</p>
+    <p>Is privacy a necessary condition of freedom? When are we okay trading in privacy for convenience?</p>
+    <br>
+    <p>The in class discussion touched on many of these points. We discussed testimony in the context of this technology. For example, someone brought up whether of not you trust a human or a compute (camera) more when given testimony about an event. At first glance this is an easy answer, where we trust the objective computer, and we discound the eaisly swayed and corrupted mind of a human. But the world we live in now is more complicated. What about AI? Just as a humans memory can be manipulated, a singular video can no loger be fully trusted (without fill trust in its source) due to it possibly being manipulated by ai. So what if a group of humans say one thing, but a video says otherwise? What if that video can be backed up be others in its network, for example another point of view offered by an neibors ring camera? It is with community and networks that trust can be built, and not easily influenced by the individual. One of the other groups talked about bitcoin and block chain technology. This is also a network built up of many machines and people. There is trust in this decentralized network similar to our trust in group testimony. Trust in the blockchain is built upon full transparancy of transations, or in other words, no privacy.</p>
+    <br>
+    <p>Given this, we are brought to the question of privacy and its level of nessesity in out modern world. Do we want massive networks of these cameras tracking our every movment? Sure having such a large amount of data can be valuable and trustworthy, but at what cost? We have to concider who is in control of such data? Is it the community its said to benifit? Is it a corporation in charge of the technology? Is it law enforcment? Or does it even matter? We discussed online privacy and how over the years people have come to accept things like cookies, and gettig tracked and profiled on the internet. Do we now have to be concerned with such ideas in the physical world? Getting tracked not just through your digital footprint, but your physical footprint as well? From our discussion, it is clear that there is a benifit to this technology, but it is personal opinion as to where the line is drawn, of if a line can ever be drawn at all. Some students belive that once the door is open to this technology, it will inevitably lead us to a survalence state. Others belive that we can retain the benifits of such technology, without falling into its traps. </p>
+    <p>mwarning. (2025, June 26). GitHub - mwarning/MeshGraphViewer: Visualize mesh graphs as forcegraph and on OpenStreetMap. GitHub. https://github.com/mwarning/MeshGraphViewer</p>
+    <p>Foucault, M. (1975). Discipline and Punish: The Birth of the Prison. Pantheon Books.</p>
 </section>
 
 

@@ -152,6 +152,14 @@ hr {
   margin: 1.5em auto;
 }
 
+.small-image {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 1.5em auto;
+}
+
+
 
 .jump-nav {
   text-align: center;
